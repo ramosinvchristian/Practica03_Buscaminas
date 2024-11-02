@@ -1,0 +1,73 @@
+body {
+    font-family: 'Press Start 2P', cursive; /* Fuente de estilo gamer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Fondo negro */
+    color: #00ff00; /* Texto verde brillante */
+}
+
+h1 {
+    margin-top: 20px;
+    color: #00ff00; /* Título en verde */
+    text-shadow: 2px 2px 8px #000; /* Sombra negra */
+}
+
+#settings {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+#board-container {
+    border: 5px solid #00ff00; /* Borde verde brillante */
+    padding: 10px;
+    background-color: #1c1c1c; /* Fondo gris oscuro para el tablero */
+    border-radius: 10px;
+}
+
+#board {
+    display: grid;
+    gap: 3px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #2c2c2c; /* Fondo gris oscuro para celdas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #00ff00; /* Color del texto verde */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para efecto 3D */
+}
+
+.cell:hover {
+    background-color: #00ff00; /* Color de fondo verde en hover */
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+.cell.revealed {
+    background-color: #333333; /* Color más claro para celdas reveladas */
+    color: #000000; /* Texto negro para celdas reveladas */
+    cursor: default;
+}
+
+.cell.flag {
+    background-color: #ff0000; /* Color rojo para celdas con bandera */
+    color: #ffffff; /* Color de texto blanco */
+}
+
+#status {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    color: #00ff00; /* Color verde para el estado */
+    text-shadow: 1px 1px 3px #000; /* Sombra negra para el estado */
+}
